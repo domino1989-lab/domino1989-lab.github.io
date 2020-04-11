@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>Windows下对Jupyter lab进行基本配置 | 欢迎你又来看小徐的闲语。。。</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Xu edit">
+  
+  
+    <meta name="description" content="主要是怎么配置python,以及添加tensorflow库等
+
+下载Anaconda,安装时有2个选项（配置环境变量等等），2个都勾上。
+
+新建一个环境，例如命名为tf1，安装jupyter lab
+
+在新环境下，打开cmd，准备安装tensorflow库。在国内直接安装比较慢，用清华大学镜像：
+
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn">
+  
+  <meta name="description" content="主要是怎么配置python,以及添加tensorflow库等  下载Anaconda,安装时有2个选项（配置环境变量等等），2个都勾上。  新建一个环境，例如命名为tf1，安装jupyter lab  在新环境下，打开cmd，准备安装tensorflow库。在国内直接安装比较慢，用清华大学镜像：   pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下对Jupyter lab进行基本配置">
+<meta property="og:url" content="http://yoursite.com/2020/04/11/Windows%E4%B8%8B%E5%AF%B9Jupyter%20lab%E8%BF%9B%E8%A1%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="欢迎你又来看小徐的闲语。。。">
+<meta property="og:description" content="主要是怎么配置python,以及添加tensorflow库等  下载Anaconda,安装时有2个选项（配置环境变量等等），2个都勾上。  新建一个环境，例如命名为tf1，安装jupyter lab  在新环境下，打开cmd，准备安装tensorflow库。在国内直接安装比较慢，用清华大学镜像：   pip install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-11T11:59:34.466Z">
+<meta property="article:modified_time" content="2020-04-11T13:53:31.354Z">
+<meta property="article:author" content="Xu edit">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">欢迎你又来看小徐的闲语。。。</a></h1>
+    <p><a href="/"></a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2020/04/11/Windows下对Jupyter lab进行基本配置/">
+  <time datetime="2020-04-11T11:59:34.466Z">
+    2020-04-11
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">Windows下对Jupyter lab进行基本配置</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <hr>
+<p>主要是怎么配置python,以及添加tensorflow库等</p>
+<ol>
+<li><p>下载Anaconda,安装时有2个选项（配置环境变量等等），2个都勾上。</p>
+</li>
+<li><p>新建一个环境，例如命名为tf1，安装jupyter lab</p>
+</li>
+<li><p>在新环境下，打开cmd，准备安装tensorflow库。在国内直接安装比较慢，用清华大学镜像：</p>
+</li>
+</ol>
+<p>pip install -i <a href="https://pypi.tuna.tsinghua.edu.cn/simpletensorflow==1.18" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simpletensorflow==1.18</a></p>
+<p>默认不是1.18版本，但我当时安装最新版本时，会报错。</p>
+<p>Numpy库也可以重装下，防止报错。</p>
+<ol start="4">
+<li>在python中输入import tensorflow as tf进行测试</li>
+</ol>
+<a id="more"></a> 
+
+<ol start="5">
+<li>将这个环境配置给jupyter lab:</li>
+</ol>
+<p>conda install nb_conda ipykernel</p>
+<p>python -m ipykernel install –user –name tf1</p>
+<p>这样jupyter lab内核选项中就多了个tf1</p>
+<p>删除kernal:   jupyter kernelspec remove kernelname</p>
+<p>查看：jupyter kernelspec list</p>
+<p>6.怎么方便地打开jupyter lab.可以建个bat文件，里面输入jupyter lab.将这个bat文件放在代码项目所在文件夹，这样打开后，默认就是在这个目录。</p>
+<p>windows下配置anaconda环境时，建议不打开conda界面，在cmd中操作。界面里有点卡。其实更好的办法是忽略以上步骤，就在cmd中进行操作：</p>
+<p>conda create –name tf1</p>
+<p>activate tf1</p>
+<p>conda install tensorflow  貌似会自动检测出清华以及其他镜像进行下载。。装的挺快</p>
+<p>然后配置 jupyter:</p>
+<p>conda install nb_conda ipykernel</p>
+<p>python -m ipykernel install –user –name tf1</p>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2020 <a href="/">Xu edit</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
