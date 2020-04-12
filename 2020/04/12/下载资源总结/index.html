@@ -13,8 +13,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="Hexo怎么用"/><link rel="alternate" href="/atom.xml" title="What Brings You Here"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
-<link rel="canonical" href="http://yoursite.com/2020/04/12/Hexo怎么用/"/>
+<meta name="description" content="下载资源总结"/><link rel="alternate" href="/atom.xml" title="What Brings You Here"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.0" />
+<link rel="canonical" href="http://yoursite.com/2020/04/12/下载资源总结/"/>
 
 <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.0" />
@@ -37,7 +37,7 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":false};
 </script>
 
-    <title>Hexo怎么用 - What Brings You Here</title>
+    <title>下载资源总结 - What Brings You Here</title>
   <meta name="generator" content="Hexo 4.2.0"></head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -82,7 +82,7 @@
         <div class="content-wrapper">
           <div id="content" class="content"><article class="post">
     <header class="post-header">
-      <h1 class="post-title">Hexo怎么用
+      <h1 class="post-title">下载资源总结
         </h1>
 
       <div class="post-meta">
@@ -94,33 +94,20 @@
     <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#怎么写新文章："><span class="toc-text">怎么写新文章：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#怎么更换Hexo主题"><span class="toc-text">怎么更换Hexo主题</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#google-drive下载"><span class="toc-text">google drive下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#百度网盘下载"><span class="toc-text">百度网盘下载</span></a></li></ol>
     </div>
-  </div><div class="post-content"><p>Hexo网站上有详细说明怎么安装，这里不说了。 主要是用Hexo在本地生成网页，然后把网页上传到github上。</p>
-<h3 id="怎么写新文章："><a href="#怎么写新文章：" class="headerlink" title="怎么写新文章："></a>怎么写新文章：</h3><ol>
-<li>在站点文件夹内右键打开git bash,输入hexo new 文章名 （或者直接在站点source文件夹内新建 文章.md）<a id="more"></a> </li>
-<li>在md文件内写文章</li>
-<li>可以hexo serve，进行测试</li>
-<li>hexo d -g 这样生成网页，并上传到github上</li>
-</ol>
-<h3 id="怎么更换Hexo主题"><a href="#怎么更换Hexo主题" class="headerlink" title="怎么更换Hexo主题"></a>怎么更换Hexo主题</h3><ol>
-<li>一般是先copy主题到themes文件夹下</li>
-<li>更改_config.yml下theme的名字</li>
-<li>再进行一些个性化设置</li>
-</ol>
-<p>主题生成有问题时，很大原因是有些包没装，可以用npm ls –depth 0 进行查看。用npm进行安装，安装没反应时，可以改用cnpm等方法，例如：<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>cnpm install hexo-renderer-sass –save</p>
+  </div><div class="post-content"><h3 id="google-drive下载"><a href="#google-drive下载" class="headerlink" title="google drive下载"></a>google drive下载</h3><p>目前找到的最佳下载资料手段：ssr+telegram+google drive+cloudflare+idm/ndm 。虽然下载速度还比不上曾经的六维空间，但资源更为丰富。。在国外的话，就不需要ssr了。唯一可能需要花钱的地方则是稳定的ssr，目前找到的最便宜的，我在用的，5元一个月，30g流量，主要是搜索用google有时更方便点，然后就偶尔看看youtube，根本花不完。。</p>
+<a id="more"></a> 
+<p>telegram上可以搜到很多资源。然后许多资源被分享在了google drive上。我没怎么用过google drive，今天稍微看了下。主要是各种几个G，几十个G的大文件，如果翻墙直接下载，那基本很难，翻墙流量走个几十个G，那得花很多钱，对个人用户来说。虽然我不怎么在gd上下东西，但我好奇地搜了下怎么免翻墙下载gd上的文件。很容易搜到可以运用cloudflare的worker，第一次知道这个东西，但部署起来非常简单。只需要gd上的文件id, 就可以愉快地下载了，还能用idm等下载工具，速度能达到几兆每秒。不过不需要翻墙，那么就直接在gd上下载吧。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200412195643364.png#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="百度网盘下载"><a href="#百度网盘下载" class="headerlink" title="百度网盘下载"></a>百度网盘下载</h3><p>gd上主要是电影，学习资料以及一些成人/封禁等资源。但一般看电视剧偏多，国内翻译组一般都是用百度网盘。我们知道5g也拯救不了百度网盘下载速度，目前想用idm/ndm快速下载百度网盘资源，主要是运用网盘助手脚本。最简单的方法是直接下载已经安装好脚本的 Firefox 或者 Chrome 浏览器。也可以自己用greasefork安装脚本，但使用时有时会失效。速度能达到2/3M每秒。 Overall, 这些方法都有时效性，过几个月，可能就不行了。</p>
 
       </div>
       
       <footer class="post-footer">
         
-        <nav class="post-nav"><a class="prev" href="/2020/04/12/%E4%B8%8B%E8%BD%BD%E8%B5%84%E6%BA%90%E6%80%BB%E7%BB%93/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">下载资源总结</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
-    <a class="next" href="/2020/04/11/%E5%BF%AB%E9%80%9F%E4%B8%8B%E8%BD%BD%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98%E8%B5%84%E6%BA%90/">
-        <span class="next-text nav-default">快速下载百度云盘资源</span>
+        <nav class="post-nav"><a class="next" href="/2020/04/12/Hexo%E6%80%8E%E4%B9%88%E7%94%A8/">
+        <span class="next-text nav-default">Hexo怎么用</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
